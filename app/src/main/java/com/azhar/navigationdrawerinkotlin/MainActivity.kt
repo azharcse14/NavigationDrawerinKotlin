@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
     private var price= 10
 
     var quantity = 1
-    private var newPrice:Int = 0
+    private var totalPrice:Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -88,8 +88,8 @@ class MainActivity : AppCompatActivity() {
             quantityTv.text = quantity.toString()
 
 
-            newPrice= price*quantity
-            priceTv.text = newPrice.toString()
+            totalPrice= price*quantity
+            priceTv.text = totalPrice.toString()
 
         }
 
@@ -100,14 +100,14 @@ class MainActivity : AppCompatActivity() {
 
             quantity -= 1
             quantityTv.text = quantity.toString()
-            newPrice -= price
-            priceTv.text = newPrice.toString()
+            totalPrice -= price
+            priceTv.text = totalPrice.toString()
 
         }
 
         sendButton.setOnClickListener {
             val intent = Intent(this@MainActivity,TestActivity::class.java);
-            intent.putExtra("Username", newPrice.toString())
+            intent.putExtra("totalPrice", totalPrice.toString())
             startActivity(intent);
         }
 

@@ -13,8 +13,8 @@ class TestActivity : AppCompatActivity() {
         setContentView(view)
 
 
-        val strUser: String = intent.getStringExtra("Username").toString()
-        binding.testTvId.text = strUser
+        val totalPrice: String = intent.getStringExtra("totalPrice").toString()
+        binding.testTvId.text = totalPrice
 
 
     }

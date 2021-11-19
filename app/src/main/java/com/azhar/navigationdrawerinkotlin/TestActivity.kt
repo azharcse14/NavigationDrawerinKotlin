@@ -2,6 +2,7 @@ package com.azhar.navigationdrawerinkotlin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.azhar.navigationdrawerinkotlin.databinding.ActivityTestBinding
 
 class TestActivity : AppCompatActivity() {
     lateinit var binding: ActivityTestBinding
@@ -12,7 +13,7 @@ class TestActivity : AppCompatActivity() {
         setContentView(view)
 
 
-        var strUser: String = intent.getStringExtra("Username").toString()
+        val strUser: String = intent.getStringExtra("Username").toString()
         binding.testTvId.text = strUser
 
 

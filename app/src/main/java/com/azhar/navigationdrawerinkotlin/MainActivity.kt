@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
     private var price= 10
 
     var quantity = 1
-    private var totalPrice:Int = 0
+    private var totalPrice:Int = price
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
